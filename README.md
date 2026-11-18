@@ -51,3 +51,10 @@ To develop, tune, and benchmark statistical and neural forecasting models on a n
 * **Model-Data Alignment Wins:** **SARIMA** achieved the lowest RMSE (`4.1092`) and MAE (`3.2004`), accurately tracking both seasonal troughs and extreme production peaks.
 * **Holt-Winters Sensitivity:** Captured the annual rhythm well but tended to overshoot later peaks near the upper end of the historical range.
 * **Deep Learning Constraints:** Both **LSTM** and **1D CNN** learned the general cyclic trajectory but produced flatter forecasts that under-predicted extreme seasonal peaks—highlighting that parameter-heavy neural networks are less data-efficient than seasonal statistical models on ~400 monthly observations.
+
+### Repository Structure
+```text
+├── Electric_Production.csv          # Raw monthly US Electric Production dataset (1985–2018)
+├── forecasting_electric_prod.ipynb  # EDA, ADF testing, SARIMA, Holt-Winters, LSTM & 1D CNN
+├── report.pdf                       # Full comparative analysis & critical evaluation
+└── README.md
